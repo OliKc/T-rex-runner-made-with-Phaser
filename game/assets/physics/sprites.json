@@ -2,86 +2,65 @@
     "player": [
 
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [12, 39, 22, 45, 12, 45]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [42, 2, 42, 14, 26, 36, 21, 16, 22, 2]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [26, 36, 26, 45, 22, 45, 12, 39, 9, 24, 21, 16]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [17, 47, 16, 45, 22, 45, 21, 47]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [2, 17, 4, 17, 9, 24, 12, 39, 2, 29]
         }
     ],
     "obst1": [
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [1, 54.5, -0.5, 8, 4, 3, 8, 1, 13, -0.5, 38.5, 54, 26, 62.5, 14, 62.5]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [38, 5.5, 38.5, 54, 13, -0.5, 25, -0.5, 32, 1]
         },
         {
-            "density": 2,
-            "friction": 0,
-            "bounce": 0,
-            "filter": {
-                "categoryBits": 1,
-                "maskBits": 65535
-            },
             "shape": [26, 62.5, 38.5, 54, 32.5, 60]
+        }
+    ],
+    "obst2": [
+        {
+            "shape": [0, 35, 0, 6, 3, 2, 12, 0, 26, 5, 26, 37, 18, 42, 9, 42]
+        },
+        {
+            "shape": [26, 5, 12, 0, 22, 1]
+        }
+    ],
+    "obst3": [
+        {
+            "shape": [6, 25, 11, 21, 11, 35, 6, 35]
+        },
+        {
+            "shape": [1, 21, 1, 10, 2, 9, 13, 5, 16, 6, 16, 17, 6, 25]
+        },
+        {
+            "shape": [13, 5, 2, 9, 7, 1, 10, 1]
+        }
+    ],
+    "obst4": [
+        {
+            "shape": [1, 10, 7, 1, 44, 1, 50, 6, 50, 19, 45, 24, 6, 25, 1, 21]
+        },
+        {
+            "shape": [6, 35, 6, 25, 45, 24, 45, 35]
+        }
+    ],
+    "obst5": [
+        {
+            "shape": [6, 35, 6, 25, 28, 23, 28, 35]
+        },
+        {
+            "shape": [33, 19, 28, 23, 6, 25, 1, 21, 1, 5, 7, 1, 27, 1, 33, 6]
         }
     ]
 }

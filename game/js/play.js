@@ -177,12 +177,12 @@ var playState = {
 
     makeObstacle: function () {
 
-        let obstType = game.rnd.integerInRange(1, 1);
+        let obstType = game.rnd.integerInRange(1, 5);
         let obstName = 'obst'.concat(obstType);
         let obstHeight = game.cache.getImage(obstName).height;
         let obst = game.add.sprite(game.world.width + 35, game.world.height - obstHeight / 2, obstName);
 
-        game.physics.p2.enable(obst, true);
+        game.physics.p2.enable(obst);
         obst.enableBody = true;
         obst.body.fixedRotation = true;
         obst.body.angularDamping = 0;
@@ -203,12 +203,16 @@ var playState = {
         this.player.animations.play('dead');
         this.die.play();
 
-        let text = game.add.text(game.world.width / 2, game.world.height / 4, 'G A M E  O V E R', {
-            font: '24px pixel',
+        let text = game.add.text(game.world.width / 2, game.world.height / 3, 'G A M E  O V E R', {
+            font: '22px pixel',
             fill: '#535353'
         });
         text.anchor.x = 0.5;
         text.anchor.y = 0.5;
+
+        let retry = game.add.sprite(game.world.width / 2, game.world.height / 1.7, 'retry');
+        retry.anchor.x = 0.5;
+        retry.anchor.y = 0.5;
 
 
         let currScore = Math.ceil(score);
