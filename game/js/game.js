@@ -5,5 +5,4 @@ game.state.add('menu', menuState);
 game.state.add('play', playState);
 game.state.add('score', scoreState);
 
-
 game.state.start('load');

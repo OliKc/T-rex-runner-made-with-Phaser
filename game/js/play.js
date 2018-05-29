@@ -52,12 +52,16 @@ var playState = {
         this.floors.add(this.startFloor);
 
         //score text
-        this.scoreText = game.add.text(game.world.width - 50, 0, '', {
-            font: '24px pixel'
+        this.scoreText = game.add.text(game.world.width - 55, 0, '', {
+            font: '16px pixel',
+            fill: '#535353'
         });
-        this.hiScoreText = game.add.text(0, 0, '', {
-            font: '24px pixel'
-        });
+        if (hiScore) {
+            this.hiScoreText = game.add.text(game.world.width - 160, 0, 'HI: ' + hiScore, {
+                font: '16px pixel',
+                fill: '#535353'
+            });
+        }
 
         //controls
         this.cursors = game.input.keyboard.createCursorKeys();
@@ -72,10 +76,7 @@ var playState = {
     update: function () {
 
         score += 0.1 * this.speedFactor;
-
         this.scoreText.text = Math.ceil(score);
-        if (hiScore) this.hiScoreText.text = Math.ceil(hiScore);
-
 
         this.playerUpdate();
 
@@ -197,21 +198,40 @@ var playState = {
 
     gameOver: function () {
 
-        this.player.animations.stop();
+        this.player.body.enabled = false;
+
         this.player.animations.play('dead');
         this.die.play();
 
         let text = game.add.text(game.world.width / 2, game.world.height / 4, 'G A M E  O V E R', {
-            font: '24px pixel'
+            font: '24px pixel',
+            fill: '#535353'
         });
         text.anchor.x = 0.5;
         text.anchor.y = 0.5;
 
+
         let currScore = Math.ceil(score);
-        if (currScore > hiScore)
+        if (!hiScore) {
             hiScore = currScore;
+        } else if (hiScore < currScore) {
+            hiScore = currScore;
+        }
+        score = 0.0;
+
+
+        this.spaceKey.onDown.add(function () {
+            game.paused = false;
+        }, self);
+        game.input.onDown.add(function () {
+            game.paused = false;
+        }, self);
+
 
         game.paused = true;
 
+        if (game.paused) {
+            game.state.restart(true, false);
+        }
     }
 };
