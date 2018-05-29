@@ -1,7 +1,6 @@
 var menuState = {
 
     create: function () {
-        game.add.text(100, 100, 'Press spacebar to start...');
 
         this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         this.spaceKey.onDown.add(this.startGame, this);

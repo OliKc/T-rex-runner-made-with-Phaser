@@ -45,7 +45,6 @@ var playState = {
         this.player.body.loadPolygon('physicsData', 'player');
         this.player.body.setCollisionGroup(this.playerCollisionGroup);
         this.player.body.collides(this.obstacleCollisionGroup, this.gameOver, this);
-        this.player.animations.play('still');
 
         //start floor
         game.physics.arcade.enable(this.startFloor);
@@ -54,10 +53,11 @@ var playState = {
 
         //score text
         this.scoreText = game.add.text(game.world.width - 50, 0, '', {
-            align: 'right',
-            boundsAlignH: 'right',
+            font: '24px pixel'
         });
-        this.hiScoreText = game.add.text(0, 0, '');
+        this.hiScoreText = game.add.text(0, 0, '', {
+            font: '24px pixel'
+        });
 
         //controls
         this.cursors = game.input.keyboard.createCursorKeys();
@@ -200,6 +200,12 @@ var playState = {
         this.player.animations.stop();
         this.player.animations.play('dead');
         this.die.play();
+
+        let text = game.add.text(game.world.width / 2, game.world.height / 4, 'G A M E  O V E R', {
+            font: '24px pixel'
+        });
+        text.anchor.x = 0.5;
+        text.anchor.y = 0.5;
 
         let currScore = Math.ceil(score);
         if (currScore > hiScore)

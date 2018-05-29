@@ -30,6 +30,7 @@ var loadState = {
         game.physics.startSystem(Phaser.Physics.P2JS);
 
         game.stage.backgroundColor = '#fff';
+
         game.state.start('menu');
     }
 };
