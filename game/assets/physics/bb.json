@@ -1,0 +1,21 @@
+{ 
+    
+    "Big_barrel": [
+        
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   1, 54.5  ,  -0.5, 8  ,  4, 3  ,  8, 1  ,  13, -0.5  ,  38.5, 54  ,  26, 62.5  ,  14, 62.5  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   38, 5.5  ,  38.5, 54  ,  13, -0.5  ,  25, -0.5  ,  32, 1  ]
+        } ,
+        {
+            "density": 2, "friction": 0, "bounce": 0, 
+            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "shape": [   26, 62.5  ,  38.5, 54  ,  32.5, 60  ]
+        }
+    ]
+}
