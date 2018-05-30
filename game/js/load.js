@@ -10,9 +10,10 @@ var loadState = {
         game.load.image('obst3', 'game/assets/sprites/obstacles/cactus_0.png');
         game.load.image('obst4', 'game/assets/sprites/obstacles/cactus_1.png');
         game.load.image('obst5', 'game/assets/sprites/obstacles/cactus_2.png');
-        //game.load.image('ob4', 'game/assets/Obstacle4.png');
-        //game.load.image('sky', 'game/assets/Sky.png');
-
+        game.load.image('obst6', 'game/assets/sprites/obstacles/cactus_3.png');
+        game.load.image('obst7', 'game/assets/sprites/obstacles/cactus_4.png');
+        game.load.image('obst8', 'game/assets/sprites/obstacles/cactus_5.png');
+        game.load.image('obst9', 'game/assets/sprites/obstacles/cactus_6.png');
 
         game.load.physics('physicsData', 'game/assets/physics/sprites.json');
 

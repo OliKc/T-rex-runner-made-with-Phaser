@@ -3,11 +3,12 @@
     src: url('/fonts/I-pixel-u.ttf');
 }
 
-body,
-body * {
+body {
     background-color: beige;
 }
 
 canvas {
     margin: 0 auto;
 }
+
+#game-container {}

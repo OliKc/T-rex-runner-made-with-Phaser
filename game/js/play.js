@@ -177,7 +177,7 @@ var playState = {
 
     makeObstacle: function () {
 
-        let obstType = game.rnd.integerInRange(1, 5);
+        let obstType = game.rnd.integerInRange(1, 9);
         let obstName = 'obst'.concat(obstType);
         let obstHeight = game.cache.getImage(obstName).height;
         let obst = game.add.sprite(game.world.width + 35, game.world.height - obstHeight / 2, obstName);
@@ -224,6 +224,7 @@ var playState = {
         score = 0.0;
 
 
+        //keys listeners
         this.spaceKey.onDown.add(function () {
             game.paused = false;
         }, self);
