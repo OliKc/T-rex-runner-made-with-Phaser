@@ -1,8 +1,17 @@
-body,
-body * {
-    background-color: beige;
+@font-face {
+    font-family: 'pixel';
+    src: url('/fonts/I-pixel-u.ttf');
+}
+
+body {
+    background-color: red;
 }
 
 canvas {
     margin: 0 auto;
+}
+
+#game-container {
+    position: relative;
+    top: 20vh
 }

@@ -1,6 +1,0 @@
-var scoreState = {
-
-    create: function () {
-
-    }
-};
