@@ -7,7 +7,7 @@ var playState = {
 
         //vars
         this.level = 0;
-        this.speed = -250.0;
+        this.speed = -260.0;
         this.speedFactor = 1.0;
         this.spawnTimer = 0;
         this.jumpTimer = 0;
