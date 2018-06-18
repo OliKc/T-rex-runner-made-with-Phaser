@@ -45,6 +45,7 @@ var playState = {
         this.player.body.loadPolygon('physicsData', 'player');
         this.player.body.setCollisionGroup(this.playerCollisionGroup);
         this.player.body.collides(this.obstacleCollisionGroup, this.gameOver, this);
+        game.world.bringToTop(this.player);
 
         //start floor
         game.physics.arcade.enable(this.startFloor);
@@ -148,10 +149,10 @@ var playState = {
     obstaclesUpdate: function () {
 
         //adding obstacle
-        if (score - this.spawnTimer > (game.rnd.frac() * 0.4 + 4.5) * this.speedFactor) {
+        if (score - this.spawnTimer > (game.rnd.frac() * 0.6 + 4.5) * this.speedFactor) {
 
-            let rand = game.rnd.integerInRange(1, 9);
-            if (rand % 2 == 1) //55.6%
+            let rand = game.rnd.integerInRange(0, 4);
+            if (rand % 2 == 0) //60%
                 this.makeObstacle();
 
             this.spawnTimer = Math.ceil(score);
@@ -235,8 +236,6 @@ var playState = {
 
         game.paused = true;
 
-        if (game.paused) {
-            game.state.restart(true, false);
-        }
+        game.state.restart(true, false);
     }
 };
